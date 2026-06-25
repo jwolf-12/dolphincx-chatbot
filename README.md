@@ -1,4 +1,4 @@
-# BloomX Chatbot - NLP Service
+# DolphinCX Chatbot
 
 RAG-based chatbot for the BloomX/DolphinCX self-service bot. Chunks and embeds a markdown knowledge base, retrieves relevant context, and generates responses via Groq LLM.
 
