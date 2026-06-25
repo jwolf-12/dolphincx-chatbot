@@ -1,4 +1,4 @@
-# DolphinCX Chatbot
+# BloomX Chatbot - NLP Service
 
 RAG-based chatbot for the BloomX/DolphinCX self-service bot. Chunks and embeds a markdown knowledge base, retrieves relevant context, and generates responses via Groq LLM.
 
@@ -16,12 +16,34 @@ RAG-based chatbot for the BloomX/DolphinCX self-service bot. Chunks and embeds a
 
 Server runs at http://127.0.0.1:8000
 
+## Testing
+
+Using curl:
+
+`curl -X POST http://127.0.0.1:8000/chat -H "Content-Type: application/json" -d "{\"query\": \"what is DolphinCX\"}"`
+
+Using Python:
+
+`import requests`
+`requests.post("http://127.0.0.1:8000/chat", json={"query": "what is DolphinCX"}).json()`
+
+To reset conversation history:
+
+`curl -X POST http://127.0.0.1:8000/reset`
+
 ## API
 
-POST /chat
+POST /chat — send a message
+POST /reset — clear conversation history
 
-Request: {"query": "what is DolphinCX"}
-Response: {"response": "DolphinCX is ..."}
+Request: {"query": "your question here"}
+Response: {"response": "answer from the bot"}
+
+## Notes
+- Knowledge base is chunked by ## headers
+- Top 3 most relevant chunks are retrieved per query
+- Conversation history is maintained per server session
+- Replace GROQ_API_KEY with your own key from console.groq.com
 
 ## Stack
 - FastAPI
