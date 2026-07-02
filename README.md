@@ -18,18 +18,19 @@ Server runs at http://127.0.0.1:8000
 
 ## Testing
 
-Using curl:
+FastAPI auto-generates an interactive Swagger UI — no curl or scripts needed.
 
-`curl -X POST http://127.0.0.1:8000/chat -H "Content-Type: application/json" -d "{\"query\": \"what is DolphinCX\"}"`
+1. Go to http://127.0.0.1:8000/docs
+2. Expand `POST /chat`, click **Try it out**
+3. Edit the request body:
+   ```json
+   {"query": "what is DolphinCX"}
+   ```
+4. Click **Execute** and view the response below
 
-Using Python:
+To reset conversation history, expand `POST /reset` and click **Try it out → Execute** (no body needed).
 
-`import requests`
-`requests.post("http://127.0.0.1:8000/chat", json={"query": "what is DolphinCX"}).json()`
-
-To reset conversation history:
-
-`curl -X POST http://127.0.0.1:8000/reset`
+Alternative: ReDoc (read-only view) is available at http://127.0.0.1:8000/redoc
 
 ## API
 

@@ -36,7 +36,7 @@ def chat(msg: Message):
         messages=[
             {
                 "role": "system",
-                "content": f"You are a helpful assistant for BloomX. Keep the answers precise and follow a guidance tone, ask questions if necessary. Answer only based on the following documentation:\n\n{context_str}"
+                "content": f"You are a helpful assistant for DolphinCX. Make sure no one realises you're working with an internal documentation Keep the answers precise and follow a guidance tone, ask questions if necessary. Answer only based on the following documentation:\n\n{context_str}"
             },
             {
                 "role": "user",
