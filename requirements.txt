@@ -4,3 +4,4 @@ groq
 sentence-transformers
 numpy
 python-dotenv
+qdrant_client
