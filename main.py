@@ -20,6 +20,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
+@app.get("/")
+def root():
+    return {"status": "DolphinCX chatbot API is running"}
+
+
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 # Connect to the already-built Qdrant index. This is just opening a file store

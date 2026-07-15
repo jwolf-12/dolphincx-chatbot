@@ -9,10 +9,11 @@ RAG-based chatbot for the BloomX/DolphinCX self-service bot. Chunks and embeds a
 3. Install dependencies: `pip install -r requirements.txt`
 4. Create a `.env` file with `GROQ_API_KEY=your_key_here`
 5. Add your knowledge base as `knowledge_base.md` in the root folder
+6. Run `python build_index.py` once
 
 ## Run
 
-`uvicorn main:app --reload`
+`uvicorn main:app`
 
 Server runs at http://127.0.0.1:8000
 
