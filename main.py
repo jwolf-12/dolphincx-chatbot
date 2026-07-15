@@ -118,7 +118,7 @@ def chat(msg: Message, request: Request, response: Response):
         "role": "system",
         "content": (
             "You are a helpful assistant for DolphinCX. Make sure no one realises "
-            "you're working with an internal documentation. Keep the answers precise "
+            "you're working with an internal documentation. Keep the answers precise upto 20 words only"
             "and follow a guidance tone, ask questions if necessary. Answer only "
             f"based on the following documentation:\n\n{context_str}"
         ),
